@@ -1,0 +1,48 @@
+Use the /dev/audio device file to play musical notes on UNIX systems.
+
+Created by Caoilte Guiry
+
+License: BSD License
+
+Sample Usage:
+$ python dev_music.py  -i input_file.txt
+
+Input File Format:
+<note>, <duration>
+<note>, <duration>
+...
+
+where <note> is a musical note in the range [A-G#] (flat notes, e.g. Bb, are
+currently not supported), and duration is the length you wish to play that 
+note.
+
+
+Example Input File:
+A, 0.2
+B, 0.2
+C, 0.1
+B, 0.1
+C, 0.1
+A, 0.4
+D, 0.4
+A, 0.2
+B, 0.2
+C, 0.1
+B, 0.1
+C, 0.1
+A, 0.4
+D, 0.4
+
+
+TODOs: 
+* Allow specification of note delimiter in the input file (currently assumed as
+  being the newline character).
+* Allow specification of note/duration delimiter (currently assumed as being 
+  comma).
+* In fact, use a proper input file format (perhaps try to find something 
+  standardised)
+* Add --tempo option
+* Add aliases for flat notes (e.g. Bb->A#)
+* Set upper limit on duration?
+* Implement REPL?
+* Document how this works a bit better.
